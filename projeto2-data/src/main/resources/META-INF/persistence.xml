@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+			 xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Users" transaction-type="JTA">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<jta-data-source>java:jboss/datasources/mybay</jta-data-source>
+		<class>data.User</class>
+		<class>data.Item</class>
+
+		<properties>
+			<!--<property name="javax.persistence.jdbc.user" value="gui" />
+			<property name="javax.persistence.jdbc.password" value="root" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mybay?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+			<property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+-->
+
+
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+
+	</persistence-unit>
+</persistence>
